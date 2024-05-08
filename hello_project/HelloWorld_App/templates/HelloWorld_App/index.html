@@ -1,0 +1,10 @@
+{% if latest_question_list %}
+<h1 style="font-weight: bold; color: red;">Welcome to, Aurora!</h1>
+    <ol>
+    {% for question in latest_question_list %}
+        <li><a href="/HelloWorld_App/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ol>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
